@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3. HTML 超链接</title>
+</head>
+<body>
+
+<!--链接的解析-->
+<p>I'm creating a link to
+    <a href="https://www.baidu.com/"
+       title="百度一下，你就知道">the Baidu homepage</a>.
+</p>
+
+<!--块级链接-->
+<a href="https://github.com/zonghuang">
+    <img src="zonghuang.jpg" alt="zonghuang logo that links to the zonghuang homepage">
+</a>
+
+<!--文档片段-->
+<h2 id="Mailing_address">Mailing address</h2>
+<p>Want to write us a letter? Use our <a href="contacts.html#Mailing_address">mailing address</a>.</p>
+<p>The <a href="#Mailing_address">company mailing address</a> can be found at the bottom of this page.</p>
+
+<!--路径 (path)-->
+<a href="contacts.html">contacts page</a>
+<a href="projects/index.html">project homepage</a>
+<a href="../pdfs/project-brief.pdf">project brief</a>
+
+<!--链接最佳实践-->
+<p><a href="http://www.example.com/video-stream/">
+    Watch the video (stream opens in separate tab, HD quality)
+</a></p>
+
+<p><a href="http://www.example.com/car-game">
+    Play the car game (requires Flash)
+</a></p>
+
+<p><a href="http://www.example.com/large-report.pdf"
+      download="Download large-report.pdf">
+    Download the sales report (PDF, 10MB)
+</a></p>
+
+<!--电子邮件链接-->
+<a href="mailto:zonghuang@aliyun.com">Send email to zonghuang</a>
+<a href="mailto:zonghuang@aliyun.com?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&amp;subject=The%20subject%20of%20the%20email &amp;body=The%20body%20of%20the%20email">
+    Send mail with cc, bcc, subject and body
+</a>
+
+</body>
+</html>

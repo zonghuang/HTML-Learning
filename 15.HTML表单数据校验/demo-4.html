@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义错误信息</title>
+</head>
+<body>
+<form>
+    <label for="mail">I would like you to provide me an e-mail.</label>
+    <input type="email" id="mail" name="mail">
+    <button>Submit</button>
+</form>
+</body>
+
+<script>
+    <!--在 JavaScript 中, 调用 setCustomValidity() 方法-->
+    var email = document.getElementById("mail");
+
+    email.addEventListener("input", function (event) {
+        if (email.validity.typeMismatch) {
+            email.setCustomValidity("I expect an e-mail, daring!");
+        } else {
+            email.setCustomValidity("");
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手动构建XMLHttpRequest</title>
+</head>
+<body>
+<button type="button" onclick="sendData({test:'ok'})">Click Me!</button>
+</body>
+<script>
+    function sendData(data) {
+        var XHR = new XMLHttpRequest();
+        var urlEncodedData = "";
+        var urlEncodedDataPairs = [];
+        var name;
+
+        // 将数据对象转换为 URL 编码的键/值对数组
+        for (name in data) {
+            urlEncodedDataPairs.push(encodeURIComponent(name) + '=' + encodeURIComponent(data[name]));
+        }
+
+        // 将配对合并为单个字符串，并将所有%-编码空间替换为“+”字符；匹配浏览器窗体提交的行为
+        urlEncodedData = urlEncodedDataPairs.join('&').replace(/%20/g, '+');
+
+        // 定义成功数据提交时发生的情况
+        XHR.addEventListener('error', function (event) {
+            alert('哎呀！出了问题。');
+        });
+
+        // 建立我们的请求
+        XHR.open('POST', 'https://example.com/cors.php');
+
+        // 为表单数据 POST 请求添加所需的HTTP头
+        XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        // 最后，发送我们的数据
+        XHR.send(urlEncodedData);
+    }
+</script>
+</html>

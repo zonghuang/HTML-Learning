@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2. HTML 文字</title>
+    <style>
+        /*p {*/
+            /*font-size: 18px;*/
+            /*color: #4b6540;*/
+        /*}*/
+    </style>
+</head>
+<body>
+
+标题和段落
+<h1>我是文章的标题</h1>
+<h2>二级标题</h2>
+<h3>三级标题</h3>
+<h4>四级标题</h4>
+<h5>五级标题</h5>
+<h6>六级标题</h6>
+<p>我是一个段落，千真万确。</p>
+
+<p>无序 Unordered</p>
+<ul>
+    <li>豆浆</li>
+    <li>油条</li>
+    <li>豆汁</li>
+    <li>焦圈</li>
+</ul>
+
+<p>有序 Ordered</p>
+<ol>
+    <li>沿着条路走到头</li>
+    <li>右转</li>
+    <li>直行穿过第一个十字路口</li>
+    <li>在第三个十字路口处左转</li>
+    <li>继续走 300 米，学校就在你的右手边</li>
+</ol>
+
+<p>嵌套列表 Nesting lists</p>
+<ol>
+    <li>先用蛋白一个、盐半茶匙及淀粉两大匙搅拌均匀，调成“腌料”，鸡胸肉切成约一厘米见方的碎丁并用“腌料”搅拌均匀，腌渍半小时。</li>
+    <li>用酱油一大匙、淀粉水一大匙、糖半茶匙、盐四分之一茶匙、白醋一茶匙、蒜末半茶匙调拌均匀，调成“综合调味料”。</li>
+    <li>鸡丁腌好以后，色拉油下锅烧热，先将鸡丁倒入锅内，用大火快炸半分钟，炸到变色之后，捞出来沥干油汁备用。</li>
+    <li>在锅里留下约两大匙油，烧热后将切好的干辣椒下锅，用小火炒香后，再放入花椒粒和葱段一起爆香。随后鸡丁重新下锅，用大火快炒片刻后，再倒入“综合调味料”继续快炒。</li>
+    <ul>
+        <li>如果你采用正宗川菜做法，最后只需加入花生米，炒拌几下就可以起锅了。</li>
+        <li>如果你在北方，可加入黄瓜丁、胡萝卜丁和花生米，翻炒后起锅。</li>
+    </ul>
+</ol>
+
+<p>描述列表 description list</p>
+<dl>
+    <dt>内心独白</dt>
+    <dd>戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。</dd>
+    <dt>语言独白</dt>
+    <dd>戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。</dd>
+    <dt>旁白</dt>
+    <dd>戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。</dd>
+    <dd>......</dd>
+</dl>
+
+<p>强调</p>
+<p>I am <em>glad</em> you weren't <em>late</em>.</p>
+
+<p>非常重要 </p>
+<p>This liquid is <strong>highly toxic</strong>.</p>
+<p>I am counting on you. <strong>Do not</strong> be late!</p>
+
+<p>斜体字</p>
+<i>I love you</i>
+
+<p>粗体字</p>
+<b>I love you</b>
+
+<p>下划线</p>
+<u>I love you</u>
+
+<p>块引用</p>
+<blockquote cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML">
+    <p>HTML也有用于标记引用的特性，至于使用哪个元素标记，取决于你引用的是一块还是一行。</p>
+</blockquote>
+
+<p>行内引用 </p>
+<p>
+    <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML">
+        HTML也有用于标记引用的特性，至于使用哪个元素标记，取决于你引用的是一块还是一行。
+    </q>
+</p>
+
+<p>引文</p>
+<p>According to the <a href=https://developer.mozilla.org/zh-CN/docs/Web/HTML">
+    <cite>Mozilla HTML page</cite></a>:
+</p>
+
+<p>缩略语</p>
+<p>We use <abbr title="Hypertext Markup Language">HTML</abbr> to structure our web documents.</p>
+
+<p>标记联系方式</p>
+<address>
+    <p>宗皇, 深圳, 中国</p>
+</address>
+
+<address>
+    <p>Page written by <a href="../authors/zonghaung/">ZongHuang</a>.</p>
+</address>
+
+<p>上标和下标</p>
+<p>My birthday is on the 4<sup>th</sup> of May 1997.</p>
+<p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+<p>If x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+
+<p>标记时间和日期</p>
+<!-- Standard simple date -->
+<time datetime="2016-01-20">20 January 2016</time>
+<!-- Just year and month -->
+<time datetime="2016-01">January 2016</time>
+<!-- Just month and day -->
+<time datetime="01-20">20 January</time>
+<!-- Just time, hours and minutes -->
+<time datetime="19:30">19:30</time>
+<!-- You can do seconds and milliseconds too! -->
+<time datetime="19:30:01.856">19:30:01.856</time>
+<!-- Date and time -->
+<time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+<!-- Date and time with timezone offset-->
+<time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+<!-- Calling out a specific week number-->
+<time datetime="2016-W04">The fourth week of 2016</time>
+
+<p>展示计算机代码</p>
+<pre>
+    <code>
+        var para = document.querySelector('p');
+
+        para.onclick = function() {
+          alert('Owww, stop poking me!');
+        }
+    </code>
+</pre>
+
+<p></p>
+
+<var>para</var>
+
+<p></p>
+
+<p>Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>A</kbd>.</p>
+
+<p></p>
+
+<smap>Successfully</smap>
+
+</body>
+</html>

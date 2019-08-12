@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--  强制地让手机浏览器采用它们真实视图的宽度来加载网页，然后再缩小加载的页面。  -->
+    <meta name="viewport" content="width=device-width">
+
+    <title>6. HTML 图片</title>
+</head>
+<body>
+<!--src 属性（source）-->
+<img src="dinosaur.jpg">
+<img src="images/dinosaur.jpg">
+<img src="https://www.example.com/images/dinosaur.jpg">
+
+<!--alt 属性-->
+<img src="images/dinosaur.jpg"
+     alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth">
+
+<!-- width、height、title 属性 -->
+<img src="images/dinosaur.jpg"
+     alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth"
+     width="400"
+     height="341"
+     title="A T-Rex on display in the Manchester University Museum">
+
+<!-- <figure > 和 <figcaption> -->
+<figure>
+    <img src="images/dinosaur.jpg"
+         alt="The head and torso of a dinosaur skeleton;
+            it has a large head with long sharp teeth"
+         width="300"
+         height="180">
+
+    <figcaption>A T-Rex on display in the Manchester University Museum.</figcaption>
+</figure>
+
+<!--CSS 背景图片-->
+<p style="background-image: url('images/dinosaur.jpg');"></p>
+
+<!--使用 SVG 创建一个圆和一个矩形-->
+<svg version="1.1"
+     baseProfile="full"
+     width="300" height="200"
+     xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="black"/>
+    <circle cx="150" cy="100" r="90" fill="blue"/>
+</svg>
+
+<!--将 SVG 添加到页面-->
+<img src="equilateral.svg"
+     alt="triangle with all three sides equal"
+     height="87px"
+     width="100px"/>
+
+<!--对于不支持 SVG 的浏览器-->
+<img src="equilateral.png" srcset="equilateral.svg" alt="triangle with equal sides">
+
+<!--对于不支持 SVG 的浏览器，使用 SVG 作为 CSS 背景图像-->
+<style>
+    img {
+        background: url("fallback.png") no-repeat center;
+        background-image: url("image.svg");
+        background-size: contain;
+    }
+</style>
+
+<!--如何在 HTML 中引入 SVG 代码-->
+<svg width="300" height="200">
+    <rect width="100%" height="100%" fill="green" />
+</svg>
+
+<!--如何使用 <iframe> 嵌入 SVG-->
+<iframe src="triangle.svg" width="500" height="500" sandbox>
+    <img src="triangle.png" alt="Triangle with three unequal sides" />
+</iframe>
+
+<!--怎样创建自适应的图片？-->
+<img src="zonghaung-800w.jpg" alt="...">
+<!--srcset 和 sizes 属性-->
+<img srcset="zonghaung-320w.jpg 320w,
+             zonghaung-480w.jpg 480w,
+             zonghaung-800w.jpg 800w"
+     sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            800px"
+     src="zonghaung-800w.jpg" alt="...">
+
+<!--相同的尺寸, 不同的分辨率。通过 srcset 和 x 语法结合-->
+<img srcset="zonghuang-320w.jpg,
+             zonghuang-480w.jpg 1.5x,
+             zonghuang-640w.jpg 2x"
+     src="zonghuang-640w.jpg" alt="...">
+
+<!--<picture> 元素-->
+<picture>
+    <source media="(max-width: 799px)" srcset="zonghuang-480w.jpg">
+    <source media="(min-width: 800px)" srcset="zonghuang-800w.jpg">
+    <img src="zonghuang-800w.jpg" alt="...">
+</picture>
+
+<!--使用现代图像格式-->
+<picture>
+    <source type="image/svg+xml" srcset="zonghuang.svg">
+    <source type="image/webp" srcset="zonghuang.webp">
+    <img src="pyramid.png" alt="...">
+</picture>
+
+</body>
+</html>
